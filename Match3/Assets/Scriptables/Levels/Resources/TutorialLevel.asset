@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e210505b8c80463898876ab45e5ebd85, type: 3}
+  m_Name: TutorialLevel
+  m_EditorClassIdentifier: 
+  prefabName: Level
+  levelName: Tutorial
+  moves: 5
+  scoreToAchive: 200
+  buttonArt: {fileID: 21300000, guid: 75e898e15e7235746a8050ebabe856c9, type: 3}
+  board: {fileID: 11400000, guid: d6805dc7c8d4419498c8444f7b55d0aa, type: 2}
+  gameSettings: {fileID: 11400000, guid: c89760655af79a14d8e1c846952a30bd, type: 2}

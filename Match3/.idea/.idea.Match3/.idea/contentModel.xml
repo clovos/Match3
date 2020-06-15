@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Git\Match3" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Code" t="Include">
+          <e p="Board" t="Include">
+            <e p="BoardConfig.cs" t="Include" />
+            <e p="BoardController.cs" t="Include" />
+            <e p="BoardFactory.cs" t="Include" />
+            <e p="BoardManager.cs" t="Include" />
+            <e p="BoardModel.cs" t="Include" />
+            <e p="BoardView.cs" t="Include" />
+          </e>
+          <e p="GameSettings" t="Include">
+            <e p="GameSettingsConfig.cs" t="Include" />
+          </e>
+          <e p="InputWrapper" t="Include">
+            <e p="InputBlocker.cs" t="Include" />
+            <e p="InputEventReporter.cs" t="Include" />
+          </e>
+          <e p="Level" t="Include">
+            <e p="LevelConfig.cs" t="Include" />
+            <e p="LevelController.cs" t="Include" />
+            <e p="LevelEntity.cs" t="Include" />
+            <e p="LevelFactory.cs" t="Include" />
+            <e p="LevelManager.cs" t="Include" />
+            <e p="LevelModel.cs" t="Include" />
+            <e p="LevelProgressEntity.cs" t="Include" />
+            <e p="LevelView.cs" t="Include" />
+          </e>
+          <e p="Menus" t="Include">
+            <e p="LevelSelectionMenu" t="Include">
+              <e p="LevelSelectionButton.cs" t="Include" />
+              <e p="LevelSelectionMenu.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Messaging" t="Include">
+            <e p="IMessenger.cs" t="Include" />
+            <e p="Message.cs" t="Include" />
+            <e p="Messages" t="Include">
+              <e p="BoardIsIdleMessage.cs" t="Include" />
+              <e p="MoveUpdateMessage.cs" t="Include" />
+              <e p="ScoreUpdateMessage.cs" t="Include" />
+            </e>
+            <e p="SimpleMessenger.cs" t="Include" />
+            <e p="SubscriptionHandle.cs" t="Include" />
+          </e>
+          <e p="Storage" t="Include">
+            <e p="IDatabase.cs" t="Include" />
+            <e p="PlayerPrefsDatabase.cs" t="Include" />
+          </e>
+          <e p="Tile" t="Include">
+            <e p="DataTypes" t="Include">
+              <e p="TilePosition.cs" t="Include" />
+              <e p="TileWorldPosition.cs" t="Include" />
+            </e>
+            <e p="TileConfig.cs" t="Include" />
+            <e p="TileController.cs" t="Include" />
+            <e p="TileFactory.cs" t="Include" />
+            <e p="TileModel.cs" t="Include" />
+            <e p="TileState.cs" t="Include" />
+            <e p="TileType.cs" t="Include" />
+            <e p="TileView.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Match3.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\Anton Liljeberg\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Anton Liljeberg\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Match3.-1857856633.00" t="ExcludeRecursive" />
+  </component>
+</project>

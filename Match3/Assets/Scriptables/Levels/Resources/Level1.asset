@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e210505b8c80463898876ab45e5ebd85, type: 3}
+  m_Name: Level1
+  m_EditorClassIdentifier: 
+  prefabName: Level
+  levelName: Summer Spring
+  moves: 15
+  scoreToAchive: 800
+  buttonArt: {fileID: 21300000, guid: 51e2a399831333b478ec978ee598bf0e, type: 3}
+  board: {fileID: 11400000, guid: cf3f8fdbcbf288345a231ccc22cf2d7b, type: 2}
+  gameSettings: {fileID: 11400000, guid: c89760655af79a14d8e1c846952a30bd, type: 2}

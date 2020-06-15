@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bcb3a5dcce5b2a44baa6a428bd4cc41, type: 3}
+  m_Name: 5x8
+  m_EditorClassIdentifier: 
+  prefabName: Board
+  boardWidth: 5
+  boardHeight: 8
+  tileWidth: 0.9
+  tileHeight: 0.9
+  tiles:
+  - {fileID: 11400000, guid: 4addee679b6e38d4ab37d10022e3c500, type: 2}
+  - {fileID: 11400000, guid: 542b592945f5b4242948a8c466b6794c, type: 2}
+  - {fileID: 11400000, guid: be8208fedb7dacf499b167e187997b28, type: 2}
+  - {fileID: 11400000, guid: d9c81296138c27a48af9a638f2486cb6, type: 2}
+  - {fileID: 11400000, guid: ff4bb500d6c81254fa5f69f957832cc8, type: 2}
