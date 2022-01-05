@@ -9,7 +9,7 @@ namespace Level
 	public class LevelConfig : ScriptableObject
 	{
 		public string prefabName = "Level";
-		public new string levelName;
+		public string levelName;
 		public int moves;
 		public int scoreToAchive;
 		public Sprite buttonArt;
