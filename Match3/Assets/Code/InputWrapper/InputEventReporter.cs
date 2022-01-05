@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using Tile.DataTypes;
+﻿using Tile.DataTypes;
 using UnityEngine;
+using Zenject;
 
 namespace InputWrapper
 {
@@ -10,12 +10,13 @@ namespace InputWrapper
 		public event SwipeEvent OnSwipe;
 
 		[SerializeField] private float swipeGestureMinimumDistance;
-		[SerializeField] private InputBlocker inputBlocker;
 		
 		private Camera _camera;
 		private Vector2 _touchStartedPosition;
 		private Vector2 _touchEndedPosition;
-		private float _swipeAngle;
+
+		[Inject]
+		private IInputBlocker _inputBlocker;
 
 		private void Start()
 		{
@@ -24,7 +25,7 @@ namespace InputWrapper
 
 		private void Update()
 		{
-			if (inputBlocker.IsBlocking()) return;
+			if (_inputBlocker.IsBlocking()) return;
 			
 			if (Input.GetMouseButtonDown(0))
 			{

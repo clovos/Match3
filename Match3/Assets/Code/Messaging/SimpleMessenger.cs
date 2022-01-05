@@ -5,12 +5,9 @@ namespace Messaging
 {
 	public class SimpleMessenger : IMessenger
 	{
-		public static SimpleMessenger Instance => _instance ?? (_instance = new SimpleMessenger());
-		private static SimpleMessenger _instance;
-
 		private readonly Dictionary<Type, List<ICallbackHandler>> _subscriberList = new Dictionary<Type, List<ICallbackHandler>>();
 		
-		public SubscriptionHandle Subscribe<T>(Action<T> callback) where T : Message
+		public SubscriptionHandle Subscribe<T>(Action<T> callback) where T : IMessage
 		{
 			var handleId = Guid.NewGuid();
 			var type = typeof(T);
@@ -23,12 +20,12 @@ namespace Messaging
 			return new SubscriptionHandle(handleId, type);
 		}
 
-		public void Unsubscribe<T>(SubscriptionHandle handle) where T : Message
+		public void Unsubscribe<T>(SubscriptionHandle handle) where T : IMessage
 		{
 			_subscriberList[handle.Type].RemoveAll(s => s.Id == handle.Id);
 		}
 
-		public void Publish<T>(T message) where T : Message
+		public void Publish<T>(T message) where T : IMessage
 		{
 			if (!_subscriberList.ContainsKey(typeof(T))) return;
 			_subscriberList[typeof(T)].ForEach(s => s.Execute(message));

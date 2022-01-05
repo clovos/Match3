@@ -1,6 +1,6 @@
 ﻿namespace Messaging.Messages
 {
-	public class BoardIdleMessage : Message
+	public class BoardIdleMessage : IMessage
 	{
 		public int Step;
 	}

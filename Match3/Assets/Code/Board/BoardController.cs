@@ -7,6 +7,7 @@ using Messaging.Messages;
 using Tile;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using Zenject;
 
 namespace Board
 {
@@ -14,12 +15,11 @@ namespace Board
 	{
 		private readonly BoardModel _model;
 		private readonly BoardView _view;
-		
 		private readonly BoardConfig _config;
 		private readonly GameSettingsConfig _gameSettingsConfig;
-		private readonly InputBlocker _inputBlocker;
-		private readonly IMessenger _messenger;
 		private readonly InputEventReporter _inputEventReporter;
+		private readonly IInputBlocker _inputBlocker;
+		private readonly IMessenger _messenger;
 
 		public BoardController(
 			BoardModel model, 
@@ -27,17 +27,17 @@ namespace Board
 			BoardConfig config, 
 			GameSettingsConfig gameSettingsConfig, 
 			InputEventReporter inputEventReporter,
-			InputBlocker inputBlocker,
-			IMessenger messenger)
+			IMessenger messenger,
+			IInputBlocker inputBlocker)
 		{
 			_model = model;
 			_view = view;
 			_config = config;
 			_gameSettingsConfig = gameSettingsConfig;
-			_inputBlocker = inputBlocker;
-			_messenger = messenger;
 			_inputEventReporter = inputEventReporter;
-			
+			_messenger = messenger;
+			_inputBlocker = inputBlocker;
+
 			var steps = CreateBoard(0);
 			UpdateBoard(steps);
 			_inputEventReporter.OnSwipe += OnSwipe;
@@ -110,7 +110,6 @@ namespace Board
 		{
 			for (var x = 0; x < _config.boardWidth; x++)
 			{
-				var tileOffset = -1;
 				for (var y = _config.boardHeight - 1; y >= 0; y--)
 				{
 					_model.Tiles[y, x].SetState(TileState.Replace, steps);

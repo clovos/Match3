@@ -1,6 +1,6 @@
 ﻿namespace Messaging
 {
-	public class Message
+	public interface IMessage
 	{
 		
 	}

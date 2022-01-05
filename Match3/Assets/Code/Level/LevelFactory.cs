@@ -1,6 +1,6 @@
-﻿using Board;
-using InputWrapper;
+﻿using InputWrapper;
 using Messaging;
+using Storage;
 using UnityEngine;
 
 namespace Level
@@ -11,19 +11,19 @@ namespace Level
 		private LevelView _view;
 		private LevelController _controller;
 
-		public void Load(Transform parent, LevelConfig config, IMessenger messenger, InputBlocker inputBlocker)
+		public void Load(Transform parent, 
+			LevelConfig config,
+			IInputBlocker inputBlocker,
+			IDatabase database,
+			IMessenger messenger)
 		{
 			var prefab = Resources.Load<GameObject>(config.prefabName);
-			var instance = GameObject.Instantiate(prefab, parent, false);
+			var instance = Object.Instantiate(prefab, parent, false);
 			_model = new LevelModel();
 			_view = instance.GetComponent<LevelView>();
 			_view.Initialize(config);
 			_controller = new LevelController(
-				_model, 
-				_view,
-				config,
-				messenger,
-				inputBlocker);
+				_model, _view, config, inputBlocker, database, messenger);
 		}
 
 		public void Destroy()
