@@ -1,4 +1,10 @@
+
+
+Original notes:
+
 # Match3
+
+Start from the menu scene to play the game
 
 .exe playable can be found in folder called Playable
 
@@ -21,9 +27,23 @@ One challenge when decoupling the logic from the mono behaviours is asyncronous 
 When starting to working on the session logic I quickly realized I needed some kind of reporting system from different parts if the game. I decided to implement a quick Pub/Sub messaging service that can be injected into the controllers so that the session logic could listen to events such as a successful match on the board. I made the messenging service into a singleton for simplicity reasons since I do not use a DI framework but I still inject it into the controller for dependency clearity and to align with the dependency inversion principle in the SOLID principles collection.
 
 Thinks that could be improved in future iterations:
+Add a DI framework to make code more modular.
 The board model got a hard reference to the tile models. This is not ideal.
 Board controller became quite heavy and would deserve some extractions.
-The code has taking testing into account even though no tests was written but it would be very easy to add a DI framework and setup test coverage on the logic and models.
+The code has taking testing into account even though no tests was written but it would be very easy to add a DI framework and setup test coverage on the logic(Controllers).
 
-I want to end these notes with saying, making games is amazing. Even just a simple game like this triggers so much excitment and I really enjoyed working on this little project..almost a little to much with the short amount of time I had. With that said I wish I had more time to add more juice and more fun mechanics but at the end of the day one does only have so much time.
-I hope you enjoy reviewing my test!
+Updated notes:
+
+This is a older project of mine which is about 2 years old. I still think it shows the fundamentals of writing clean code in Unity. 
+The key focus points here is to make the code modular, to follow the SOLID principles, to seperate the UI, logic and data and to utilize Unitys strengths.
+
+Going through the project now does make me want to change a few things and I think this could be a good point of discussion for us.
+
+I know that I was only suppose to provide a few hundred lines of code and this project is more than that so I will mention a few folders that we can focus on:
+
+A way to structure a object from persistent data->UI:
+Asset/Code/Level
+
+A simple example of how to setup a modular service:
+Asset/Code/Messaging
+
